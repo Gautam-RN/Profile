@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Gautam R Nair</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/projects">Projects</a>
+    <a href="/contact">Contact</a>
+  </nav>
+
+  <section class="projects">
+    <h2>My Projects</h2>
+
+    <div class="filter-buttons">
+      <button class="active" onclick="filterProjects('all', this)">All</button>
+      <button onclick="filterProjects('r', this)">Robots</button>
+      <button onclick="filterProjects('w', this)">Websites</button>
+      <button onclick="filterProjects('a', this)">Applications</button>
+      <button onclick="filterProjects('2d', this)">Games (2D)</button>
+      <button onclick="filterProjects('3d', this)">Games (3D)</button>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card r">
+        <a href="/project-view?code=1">
+          <img src="{{ url_for('static', filename='images/projects/robot/demo.png') }}" alt="Robot Project">
+          <h3>Robot Project 3</h3>
+          <p>Gesture Controlled Arm</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function filterProjects(category, btn) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-buttons button');
+
+      buttons.forEach(button => button.classList.remove('active'));
+      btn.classList.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Trigger "All" by default (optional if already active in HTML)
+    window.onload = () => {
+      filterProjects('all', document.querySelector('.filter-buttons button.active'));
+    };
+  </script>
+</body>
+</html>

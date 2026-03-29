@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gautam R Nair | Portfolio</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <section class="hero" id="home">
+            <div class="bg">
+                <h1>Hi, I am Gautam.</h1>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I'm Gautam R Nair, a student of Kendriya Vidyalaya Pattom, Thiruvananthapuram, 
+                    with a deep interest in technology and creativity. I enjoy developing websites, 
+                    apps, and games, and I love experimenting with Arduino-based systems. I'm also a 
+                    passionate keyboard player who finds joy in expressing through music. I'm fluent 
+                    in English, Hindi, and Malayalam, which helps me connect with people from different 
+                    walks of life. I work confidently with HTML, CSS, Python, MySQL, and C++, and I’m 
+                    always eager to learn and improve.
+                </p>
+                <p>
+                    I believe in building things that are both useful and meaningful. Whether it’s a 
+                    digital solution or a simple idea, I approach every task with dedication and 
+                    curiosity. Living in Thiruvananthapuram inspires me with its mix of tradition and 
+                    technology. I'm always open to working on new challenges—just drop a message, and we 
+                    can explore it together.
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="{{ url_for('static', filename='images/my.png') }}" alt="Gautam's photo" />
+            </div>
+        </section>
+        <section class="Contact">
+            <div class="contact-box">
+                <h2>Contact Me</h2>
+                <form action="/submit" method="post">
+                  <input type="text" name="name" placeholder="Your Name" required>
+                  <input type="email" name="mail" placeholder="Your Email" required>
+                  <input type="number" name="phone" placeholder="Your Phone Number" required>
+                  <textarea rows="4" name="msg" placeholder="Your Message" required></textarea>
+                  <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>

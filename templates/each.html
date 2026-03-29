@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Detail</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 1000px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-details {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 24px;
+            color: green;
+            margin-bottom: 15px;
+        }
+
+        .product-description {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .buy-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="product-container">
+    <div class="product-image">
+        <img src="{{project[3]}}" alt="Product Image">
+    </div>
+    <div class="product-details">
+        <div class="product-title">{{project[0]}}</div>
+        <div class="product-price">{{project[4]}}</div>
+        <div class="product-description">{{project[1]}}</div>
+        <a class="buy-button" href="{{project[2]}}">Try</a>
+    </div>
+</div>
+
+</body>
+</html>

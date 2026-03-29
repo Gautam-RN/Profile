@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact | Gautam R Nair</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <section class="Contact">
+      <div class="contact-box">
+        <h2>Contact Me</h2>
+        <form action="/submit" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="mail" placeholder="Your Email" required>
+          <input type="number" name="phone" placeholder="Your Phone Number" required>
+          <textarea rows="4" name="msg" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="Contact">
+      <div class="contact-box">
+        <h2>Find Me Online</h2>
+        <div class="social-links" style="text-align: center; font-size: 1.5rem;">
+          <a href="https://www.facebook.com/yourusername" target="_blank" style="margin: 0 10px; color: #87cefa;">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/yourusername" target="_blank" style="margin: 0 10px; color: #ff69b4;">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/yourusername" target="_blank" style="margin: 0 10px; color: #1da1f2;">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://www.youtube.com/@yourchannel" target="_blank" style="margin: 0 10px; color: #ff0000;">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="mailto:yourmail@gmail.com" style="margin: 0 10px; color: #db4437;">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://scratch.mit.edu/users/yourusername" target="_blank" style="margin: 0 10px; color: #f9a825;">
+            <i class="fas fa-code"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
